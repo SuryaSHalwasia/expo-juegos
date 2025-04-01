@@ -1,33 +1,17 @@
+<!-- index.html on GitHub Pages -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting to Juegos App...</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Redirecting to Juegos App...</h2>
-
-    <script>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
       const params = new URLSearchParams(window.location.search);
       const eventId = params.get('eventId');
-
       if (eventId) {
-        const expoLink = `exp://exp.host/@react-surya/Juegos-Gen2?eventId=${eventId}`;
-        window.location.href = expoLink;
-      } else {
-        document.body.innerHTML = "<h2>Missing event ID</h2>";
+        window.location.href = `juegos://expo-juegos/?eventId=${eventId}`;
       }
     </script>
+  </head>
+  <body>
+    Redirecting to app...
   </body>
 </html>
