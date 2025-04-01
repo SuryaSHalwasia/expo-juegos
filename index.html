@@ -1,17 +1,34 @@
-<!-- index.html on GitHub Pages -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-      const params = new URLSearchParams(window.location.search);
-      const eventId = params.get('eventId');
-      if (eventId) {
-        window.location.href = `juegos://expo-juegos/?eventId=${eventId}`;
+    <meta charset="UTF-8" />
+    <title>Redirecting to Juegos App...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
       }
-    </script>
+    </style>
   </head>
   <body>
-    Redirecting to app...
+    <h2>Redirecting to Juegos App...</h2>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const eventId = params.get('eventId');
+
+      if (eventId) {
+        // Replace with your actual Expo username and project slug
+        const expoLink = `exp://exp.host/@react-surya/expo-juegos?eventId=${eventId}`;
+        window.location.href = expoLink;
+      } else {
+        document.body.innerHTML = "<h2>Missing event ID</h2>";
+      }
+    </script>
   </body>
 </html>
